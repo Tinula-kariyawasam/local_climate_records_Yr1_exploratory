@@ -1,0 +1,25 @@
+---
+title: ""
+output:
+  html_document:
+    theme: simplex
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+    css: style.css
+---
+
+## Hello its me
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+library(knitr)
+```
+
+```{js}
+var password = prompt("Please enter the password to access this site:");
+if (password !== "yourPassword") {
+document.body.innerHTML = "Access Denied";
+}
+```

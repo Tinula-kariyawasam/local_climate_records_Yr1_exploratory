@@ -1,0 +1,11 @@
+name: "PhD Review"
+output_dir: "."
+navbar:
+  title: "PhD Review - Year 1"
+  left:
+    - text: "Index"
+      href: index.html
+    - text: "Methods"
+      href: methods.html
+    - text: "Visualisation"
+      href: visualisation.html

@@ -1,0 +1,36 @@
+---
+title: "Fit  model  counts"
+output:
+  html_document:
+    theme: simplex
+    toc: true
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+    code_folding: hide
+    toc_depth: 2
+    css: style.css
+editor_options: 
+  chunk_output_type: console
+  markdown: 
+    wrap: sentence
+---
+
+#### visuals are cool 
+
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+```{r}
+library(data.table)
+library(ggplot2) 
+library(dplyr)
+dt.temp = readRDS("data/clean_tempACORN_1950_21May.rds")
+dt.temp |> filter(station_id == 2079) |> 
+  filter(year == 2000) |> 
+  ggplot() + 
+  geom_jitter(aes(tmin, tmax)) 
+```
+
